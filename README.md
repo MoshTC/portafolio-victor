@@ -4,7 +4,7 @@
 
 Aquí presento mis proyectos de desarrollo de software, mi experiencia práctica en soporte técnico TI y las tecnologías con las que trabajo.
 
-🌐 **Ver sitio web:** [https://moshtc.github.io/portafolio-victor/](https://moshtc.github.io/portafolio-victor/)
+🌐 **Ver sitio web:** [https://victor-tinoco.ifree.page/portafolio-victor/#about](https://victor-tinoco.ifree.page/portafolio-victor/#about)
 
 ---
 
