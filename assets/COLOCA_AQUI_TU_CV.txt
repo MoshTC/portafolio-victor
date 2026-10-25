@@ -1,5 +1,0 @@
-Coloca aquí tu archivo PDF con el nombre exacto:
-cv-victor-tinoco.pdf
-
-Para que el botón de "Descargar CV" de la web lo descargue directamente.
-
