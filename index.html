@@ -135,8 +135,26 @@
             <a href="#projects" class="px-6 py-3 bg-accent hover:bg-accentHover text-white font-medium rounded-lg transition-colors shadow-lg shadow-accent/20">
               Ver proyectos
             </a>
-            <a href="./assets/cv-victor-tinoco.pdf" download="CV-Victor-Tinoco.pdf" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-card hover:bg-neutral-800 border border-neutral-700 text-white font-medium rounded-lg flex items-center gap-2 transition-colors">
-              <i data-lucide="download" class="w-4 h-4" aria-hidden="true"></i> Descargar CV
+            <a
+              id="cv-download-btn"
+              href="./assets/cv-victor-tinoco.pdf"
+              download="CV-Victor-Tinoco.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="cv-download-btn px-6 py-3 bg-card hover:bg-neutral-800 border border-neutral-700 text-white font-medium rounded-lg flex items-center gap-2 transition-colors select-none"
+              aria-label="Descargar CV en PDF"
+            >
+              <span class="cv-progress-line" aria-hidden="true"></span>
+              <span class="cv-state-idle">
+                <i data-lucide="download" class="w-4 h-4 cv-icon-download" aria-hidden="true"></i>
+                <span class="cv-text">Descargar CV</span>
+              </span>
+              <span class="cv-state-success" aria-hidden="true">
+                <svg class="w-4 h-4 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path class="cv-check-svg" d="M20 6L9 17L4 12"></path>
+                </svg>
+                <span class="text-emerald-400 font-medium text-sm">¡Descargado!</span>
+              </span>
             </a>
             <div class="flex items-center gap-2 ml-2">
               <a href="https://github.com/MoshTC" target="_blank" rel="noopener noreferrer" aria-label="Perfil de GitHub de Víctor Tinoco" class="p-3 bg-card hover:bg-neutral-800 rounded-lg text-gray-400 hover:text-white transition-colors border border-transparent hover:border-neutral-700 flex items-center justify-center">

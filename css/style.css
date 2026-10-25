@@ -45,3 +45,109 @@ html {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ==========================================================================
+   ANIMACIÓN DEL BOTÓN DESCARGAR CV (Inspirado en Milan Raring)
+   ========================================================================== */
+.cv-download-btn {
+  position: relative;
+  overflow: hidden;
+  min-width: 175px;
+  justify-content: center;
+}
+
+/* Barra de progreso sutil en la base del botón */
+.cv-progress-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #EF4444;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.cv-download-btn.is-downloading .cv-progress-line {
+  width: 100%;
+}
+
+/* Efecto de flecha descendente continua durante la descarga */
+.cv-download-btn.is-downloading .cv-icon-download {
+  animation: cvArrowDrop 0.8s ease-in-out infinite;
+}
+
+@keyframes cvArrowDrop {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  45% {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-8px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Estados de contenido (reposo vs éxito) */
+.cv-state-idle,
+.cv-state-success {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.cv-state-success {
+  position: absolute;
+  opacity: 0;
+  transform: translateY(8px) scale(0.95);
+  pointer-events: none;
+}
+
+/* Transición a estado de éxito (Check ✓) */
+.cv-download-btn.is-success .cv-state-idle {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+.cv-download-btn.is-success .cv-state-success {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.cv-download-btn.is-success {
+  border-color: rgba(52, 211, 153, 0.5); /* sutil acento esmeralda */
+}
+
+/* Trazo animado del checkmark ✓ */
+.cv-check-svg {
+  stroke-dasharray: 24;
+  stroke-dashoffset: 24;
+  transition: stroke-dashoffset 0.4s ease 0.15s;
+}
+
+.cv-download-btn.is-success .cv-check-svg {
+  stroke-dashoffset: 0;
+}
+
+/* Accesibilidad: Respeto a prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .cv-download-btn.is-downloading .cv-icon-download {
+    animation: none;
+  }
+  .cv-progress-line,
+  .cv-check-svg,
+  .cv-state-idle,
+  .cv-state-success {
+    transition: none !important;
+  }
+}
+

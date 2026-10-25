@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderCompetencies();
   initMobileMenu();
   initScrollAnimations();
+  initCvDownloadAnimation();
   if (typeof lucide !== 'undefined' && lucide.createIcons) {
     lucide.createIcons();
   }
@@ -376,3 +377,49 @@ function initScrollAnimations() {
 
   document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 }
+
+/* ==========================================================================
+   7. ANIMACIÓN DEL BOTÓN DESCARGAR CV (INSPIRADA EN MILAN RARING)
+   ========================================================================== */
+function initCvDownloadAnimation() {
+  const btn = document.getElementById('cv-download-btn');
+  if (!btn) return;
+
+  const textNode = btn.querySelector('.cv-text');
+  const progressLine = btn.querySelector('.cv-progress-line');
+  let isAnimating = false;
+
+  btn.addEventListener('click', () => {
+    if (isAnimating) return;
+    isAnimating = true;
+
+    // Fase 1: Descargando (flecha animada y barra de progreso inferior)
+    btn.classList.add('is-downloading');
+    if (textNode) textNode.textContent = 'Descargando...';
+
+    // Fase 2: Éxito (Check ✓ animado y confirmación) tras 1.2 segundos
+    setTimeout(() => {
+      btn.classList.remove('is-downloading');
+      btn.classList.add('is-success');
+
+      // Fase 3: Regreso suave a reposo tras 2.2 segundos
+      setTimeout(() => {
+        btn.classList.remove('is-success');
+        if (textNode) textNode.textContent = 'Descargar CV';
+
+        // Reset de la barra de progreso sin animación inversa
+        if (progressLine) {
+          progressLine.style.transition = 'none';
+          progressLine.style.width = '0%';
+          setTimeout(() => {
+            progressLine.style.transition = '';
+            isAnimating = false;
+          }, 60);
+        } else {
+          isAnimating = false;
+        }
+      }, 2200);
+    }, 1200);
+  });
+}
+
