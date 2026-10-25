@@ -1,6 +1,4 @@
 /* Estilos complementarios y animaciones */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +7,13 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Foco accesible para navegación por teclado (WCAG 2.2 AA) */
+:focus-visible {
+  outline: 2px solid #EF4444 !important;
+  outline-offset: 3px !important;
 }
 
 /* Custom scrollbar */
@@ -41,4 +45,3 @@ html {
   opacity: 1;
   transform: translateY(0);
 }
-
