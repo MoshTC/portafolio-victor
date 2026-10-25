@@ -1,29 +1,18 @@
 <div align="center">
 
-  <img src="./assets/favicon.svg" alt="Víctor Tinoco Logo" width="80" height="80" style="margin-bottom: 12px;" />
+  <img src="./assets/favicon.svg" alt="Víctor Tinoco" width="70" height="70" />
 
   # Víctor Alfredo Tinoco Cárdenas
-  ### Software Engineering & IT Infrastructure Portfolio
+  ### Portafolio Profesional — Desarrollo Web & Soporte TI
 
   <p align="center">
-    <strong>Plataforma web personal de alto rendimiento, orientada al desarrollo de software, gestión de bases de datos y soporte en infraestructura TI.</strong>
+    <strong>Estudiante de Ingeniería de Sistemas en CIBERTEC | Técnico Informático</strong><br />
+    Desarrollo aplicaciones web, modelado de bases de datos y soporte en infraestructura tecnológica.
   </p>
 
   <p align="center">
-    <a href="https://github.com/MoshTC/portafolio-victor/actions">
-      <img src="https://img.shields.io/badge/Build-Passing-brightgreen?style=flat-square&logo=github-actions&logoColor=white" alt="Build Status" />
-    </a>
-    <a href="https://www.w3.org/WAI/WCAG22/quickref/">
-      <img src="https://img.shields.io/badge/Accessibility-WCAG_2.2_AA-blue?style=flat-square&logo=w3c&logoColor=white" alt="WCAG 2.2 AA" />
-    </a>
-    <a href="https://owasp.org/www-project-application-security-verification-standard/">
-      <img src="https://img.shields.io/badge/Security-OWASP_ASVS_v4.0-emerald?style=flat-square&logo=owasp&logoColor=white" alt="OWASP ASVS" />
-    </a>
-    <a href="https://web.dev/explore/fast">
-      <img src="https://img.shields.io/badge/Performance-100%2F100-success?style=flat-square&logo=lighthouse&logoColor=white" alt="Lighthouse" />
-    </a>
-    <a href="https://opensource.org/licenses/MIT">
-      <img src="https://img.shields.io/badge/License-MIT-black?style=flat-square" alt="License: MIT" />
+    <a href="https://moshtc.github.io/portafolio-victor/">
+      <img src="https://img.shields.io/badge/Demo-Ver_Sitio_Web-EF4444?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Demo" />
     </a>
   </p>
 
@@ -37,13 +26,10 @@
   </p>
 
   <p align="center">
-    <a href="#-visión-general">Visión General</a> •
-    <a href="#-arquitectura-y-principios-de-ingeniería">Arquitectura</a> •
-    <a href="#-métricas-core-web-vitals">Rendimiento</a> •
+    <a href="#-sobre-mí">Sobre Mí</a> •
     <a href="#-proyectos-destacados">Proyectos</a> •
-    <a href="#-seguridad-y-cumplimiento">Seguridad</a> •
-    <a href="#-estructura-del-repositorio">Estructura</a> •
-    <a href="#-despliegue">Despliegue</a> •
+    <a href="#-habilidades--tecnologías">Habilidades</a> •
+    <a href="#-estructura-del-proyecto">Estructura</a> •
     <a href="#-contacto">Contacto</a>
   </p>
 
@@ -51,156 +37,89 @@
 
 ---
 
-## 📌 Visión General
+## 📌 Sobre Mí
 
-Este repositorio aloja la solución web personal de **Víctor Alfredo Tinoco Cárdenas**, estudiante de Ingeniería de Sistemas en **CIBERTEC** y técnico informático activo. El proyecto ha sido desarrollado bajo un enfoque de **cero dependencias de servidor (Jamstack estático)**, priorizando tiempos de respuesta ultrarrápidos, seguridad en el cliente y accesibilidad universal conforme a las directrices de la W3C.
+Estudiante de **Ingeniería de Sistemas en CIBERTEC** y técnico informático con experiencia práctica en soporte técnico a usuarios, mantenimiento preventivo de equipos, cableado/conectividad de redes LAN y administración de plataformas web institucionales.
 
-El sitio integra de forma interactiva la trayectoria profesional, competencias técnicas, proyectos de software en producción y documentos descargables oficiales (CV).
+Cuento con sólidos conocimientos en **Java, PHP, JavaScript, HTML5/CSS3 y MySQL**, orientados a la creación de soluciones web funcionales, automatización de procesos internos y gestión de datos.
 
----
-
-## 🏛️ Arquitectura y Principios de Ingeniería
-
-```mermaid
-flowchart LR
-    subgraph DataLayer ["Capa de Datos (Inmutable)"]
-        D["js/data.js"] --> |Estructuras en Memoria| A["js/app.js"]
-    end
-
-    subgraph LogicLayer ["Capa de Presentación y Lógica"]
-        A --> |Sanitización escapeHTML| DOM["DOM Manipulator"]
-        A --> |Intersection Observer| OBS["Animaciones Reveal"]
-        A --> |Control ARIA| ACC["Navegación Accesible"]
-    end
-
-    subgraph ViewLayer ["Capa Visual (Frontend)"]
-        DOM --> V["index.html"]
-        OBS --> V
-        ACC --> V
-        CSS["css/style.css"] --> V
-        CDN["Tailwind CDN & Lucide SVG"] --> V
-    end
-```
-
-### Principios Fundamentales Implementados:
-1. **Desacoplamiento Estricto (Data-Driven UI):** Toda la información profesional (experiencia, proyectos, stacks, datos de contacto) reside en `js/data.js`. La vista `index.html` consume dichos datos dinámicamente mediante el orquestador `js/app.js`.
-2. **Zero-Build Architecture:** No depende de compiladores Node.js ni bundlers complejos en producción. Es portable, compatible con cualquier servidor HTTP (Apache, Nginx, cPanel, S3, GitHub Pages) y ejecutable de forma instantánea.
-3. **Hardening y Seguridad Preventiva:** Implementación activa de **Content Security Policy (CSP)**, aislamiento de enlaces externos contra **Reverse Tabnabbing** (`rel="noopener noreferrer"`) y codificación de entidades HTML para mitigar **Cross-Site Scripting (XSS)**.
-4. **Accesibilidad Nativa (WCAG 2.2 AA):** Incorporación de enlace *"Skip to main content"*, anillos visibles de foco por teclado (`:focus-visible`), jerarquía semántica continua (H1-H2-H3) y sincronización de estados ARIA (`aria-expanded`, `aria-controls`).
-
----
-
-## ⚡ Métricas Core Web Vitals (Evaluación Técnica)
-
-El sitio ha sido sometido a pruebas de rendimiento en condiciones de red estandarizadas (Percentil 75):
-
-| Métrica | Estándar W3C / Google | Resultado Obtenido | Estado | Impacto Técnico |
-| :--- | :---: | :---: | :---: | :--- |
-| **LCP** (Largest Contentful Paint) | ≤ 2.5 s | **0.85 s** | 🟢 **Excelente** | Renderizado del Hero casi instantáneo. |
-| **INP** (Interaction to Next Paint) | ≤ 200 ms | **< 45 ms** | 🟢 **Excelente** | Cero bloqueo de hilo principal en filtrado. |
-| **CLS** (Cumulative Layout Shift) | ≤ 0.10 | **0.00** | 🟢 **Perfecto** | Estabilidad visual absoluta sin saltos de layout. |
-| **FCP** (First Contentful Paint) | ≤ 1.8 s | **0.68 s** | 🟢 **Excelente** | Primer pintado gráfico en menos de 700 ms. |
-| **TTFB** (Time to First Byte) | ≤ 800 ms | **< 100 ms** | 🟢 **Excelente** | Servicio inmediato de archivos estáticos. |
+- 📍 **Ubicación:** Bellavista, Callao, Perú
+- 🎓 **Formación:** CIBERTEC — Ingeniería de Sistemas (En curso)
+- 💼 **Experiencia Actual:** Técnico Informático en Cuna Niño Jesús de Praga
 
 ---
 
 ## 💻 Proyectos Destacados
 
-Los proyectos documentados en la plataforma reflejan experiencia aplicada en desarrollo web, arquitecturas orientadas a objetos y soporte corporativo:
-
-| Proyecto | Dominio / Categoría | Stack Tecnológico | Resumen Funcional | Estado de Código |
-| :--- | :--- | :--- | :--- | :---: |
-| **Sistema de Asistencia Institucional** | Web Application / Gestión | `PHP` `JavaScript` `MySQL` `phpMyAdmin` | Procesamiento de marcaciones, importación de registros CSV, validación de tardanzas y reportes administrativos. | 🔒 *Privado / Institucional* |
-| **Respawn Store** | E-commerce / Frontend | `HTML5` `CSS3` `JavaScript` `Bootstrap` | Tienda virtual de consolas y accesorios con catálogo interactivo, diseño adaptativo y control de versiones con Git. | 🌐 [Repositorio Público](https://github.com/MoshTC/respawn-store) |
-| **Sistema de Matrícula y Alumnos** | Desktop Software / POO | `Java` `Swing` `POO` `SQL` | Aplicación orientada a objetos con arquitectura en capas, formularios Swing y operaciones CRUD de persistencia. | 🎓 *Proyecto Académico* |
+| Proyecto | Descripción | Stack | Acceso |
+| :--- | :--- | :--- | :---: |
+| **Sistema de Asistencia Institucional** | Administración de registros de marcaciones mediante importación CSV, validación de tardanzas y generación de reportes administrativos. | `PHP` `JavaScript` `MySQL` `phpMyAdmin` | 🔒 *Institucional* |
+| **Respawn Store** | Tienda web de consolas y accesorios de videojuegos con catálogo de productos, diseño responsive adaptado a móviles y control de versiones. | `HTML5` `CSS3` `JavaScript` `Bootstrap` | 🌐 [Ver Repositorio](https://github.com/MoshTC/respawn-store) |
+| **Sistema de Matrícula y Alumnos** | Software de escritorio desarrollado con arquitectura orientada a objetos (POO), formularios gráficos en Java Swing y persistencia en base de datos. | `Java` `Swing` `POO` `SQL` | 🎓 *Académico* |
 
 ---
 
-## 🛡️ Auditoría y Cumplimiento Técnico (100 Pruebas)
+## 🛠️ Habilidades & Tecnologías
 
-El código fuente cuenta con una auditoría técnica completa registrada en los siguientes documentos normativos:
-
-- 📄 **[AUDITORIA_WEB.md](./AUDITORIA_WEB.md):** Matriz exhaustiva con el desglose de **100 pruebas de verificación** (Seguridad OWASP, Funcionalidad, Core Web Vitals, Responsive, WCAG 2.2 AA, Backend, UX, SEO, Cross-Browser y CI/CD).
-- 📁 **[Carpeta AUDITORIA/](./AUDITORIA/):**
-  - `01_DIAGNOSTICO.md`: Análisis arquitectónico y evaluación de dependencias.
-  - `02_PRUEBAS.md`: Metodología y cobertura formal de pruebas (87 aprobadas / 13 no aplicables a cliente estático).
-  - `03_SEGURIDAD.md`: Clasificación formal de vulnerabilidades resueltas (CWE-1022, CWE-693, CWE-79, CWE-353).
-  - `04_CORRECCIONES.md`: Registro de intervenciones aplicadas y pruebas de regresión.
-  - `05_RENDIMIENTO.md`: Métricas comparativas antes y después de la optimización.
-  - `06_RESULTADO_FINAL.md`: Dictamen oficial: **APTO PARA PRODUCCIÓN**.
+- **Lenguajes:** Java, PHP, JavaScript (ES6+), SQL, HTML5, CSS3.
+- **Frameworks & Estilos:** Tailwind CSS, Bootstrap.
+- **Bases de Datos:** MySQL, SQL Server, phpMyAdmin.
+- **Herramientas & Entornos:** Git & GitHub, Visual Studio Code, Eclipse IDE, NetBeans, cPanel, Microsoft Excel.
+- **Soporte TI & Redes:** Diagnóstico y mantenimiento preventivo/correctivo de computadoras y proyectores, redes LAN, administración de cuentas y soporte a usuarios.
+- **Idiomas:** Español (Nativo), Inglés (Básico).
 
 ---
 
-## 📁 Estructura del Repositorio
+## 📁 Estructura del Proyecto
 
 ```text
 portafolio-victor/
 │
-├── index.html                  # Punto de entrada HTML5 con semántica y metadatos SEO/OG
-├── robots.txt                  # Reglas estándar de rastreo para bots de búsqueda
-├── sitemap.xml                 # Mapa del sitio formal para Google Search Console
+├── index.html              # Estructura principal y secciones de la web
+├── robots.txt              # Configuración de rastreo para buscadores
+├── sitemap.xml             # Mapa del sitio web para indexación
 │
-├── assets/                     # Recursos multimedia estáticos
-│   ├── favicon.svg             # Logotipo vectorial optimizado (</>)
-│   └── cv-victor-tinoco.pdf     # Currículum Vitae oficial (documento binario verificado)
+├── assets/                 # Archivos estáticos y documentos
+│   ├── favicon.svg         # Ícono del sitio web
+│   └── cv-victor-tinoco.pdf # Currículum Vitae descargable en PDF
 │
 ├── css/
-│   └── style.css               # Reglas CSS nativas, foco accesible (:focus-visible) y animaciones
+│   └── style.css           # Estilos personalizados, scrollbar y animaciones
 │
 ├── js/
-│   ├── data.js                 # Capa de datos inmutable (información profesional desacoplada)
-│   └── app.js                  # Orquestador del DOM, sanitizador XSS, observadores y filtros
+│   ├── data.js             # Información del portafolio (proyectos, bio, experiencia)
+│   └── app.js              # Lógica de filtros, menú móvil y renderizado
 │
-├── AUDITORIA/                  # Informes técnicos de la auditoría de 100 pruebas
-│   ├── 01_DIAGNOSTICO.md
-│   ├── 02_PRUEBAS.md
-│   ├── 03_SEGURIDAD.md
-│   ├── 04_CORRECCIONES.md
-│   ├── 05_RENDIMIENTO.md
-│   └── 06_RESULTADO_FINAL.md
-│
-├── AUDITORIA_WEB.md            # Matriz general de 100 pruebas de ingeniería
-├── .gitignore                  # Reglas de exclusión para control de versiones
-└── README.md                   # Documentación técnica corporativa del repositorio
+├── .gitignore              # Archivos excluidos de Git
+└── README.md               # Documentación del proyecto
 ```
 
 ---
 
-## 🚀 Despliegue y Ejecución
+## ⚡ Ejecución Local
 
-### Ejecución Local
-No requiere Node.js, compilación ni instalación de paquetes:
-```bash
-# 1. Clonar el repositorio
-git clone https://github.com/MoshTC/portafolio-victor.git
+Este portafolio es 100% estático (no requiere Node.js ni instalación de dependencias):
 
-# 2. Ingresar al directorio
-cd portafolio-victor
-
-# 3. Abrir index.html en cualquier navegador moderno o con VS Code Live Server
-```
-
-### Despliegue en Producción
-- **GitHub Pages:** Habilitar en **Settings > Pages > Source: Deploy from a branch (`main` / `root`)**.
-- **Servidores Tradicionales (Apache / Nginx / cPanel):** Transferir el contenido de la carpeta directamente a `public_html/` o `/var/www/html/`.
-- **Edge CDNs (Cloudflare Pages, Vercel, Netlify):** Vincular el repositorio sin comandos de build ni carpetas de salida complejas.
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/MoshTC/portafolio-victor.git
+   ```
+2. Entra a la carpeta y abre `index.html` en tu navegador favorito (o usa la extensión **Live Server** de VS Code).
 
 ---
 
-## 👤 Perfil del Autor
+## 📬 Contacto
 
-**Víctor Alfredo Tinoco Cárdenas**  
-*Estudiante de Ingeniería de Sistemas — CIBERTEC*  
-*Técnico Informático | Soporte TI, Redes & Desarrollo Web*  
-📍 Bellavista, Callao, Perú
+¿Te interesa mi perfil para una oportunidad laboral o colaboración técnica? Puedes contactarme a través de:
 
-- **Correo Corporativo:** [victortinoco0203@gmail.com](mailto:victortinoco0203@gmail.com)
+- **Correo electrónico:** [victortinoco0203@gmail.com](mailto:victortinoco0203@gmail.com)
 - **LinkedIn:** [Víctor Alfredo Tinoco Cárdenas](https://www.linkedin.com/in/victor-alfrendo-tinoco-cardenas-b3a55a22a/)
 - **GitHub:** [@MoshTC](https://github.com/MoshTC)
-- **WhatsApp:** [+51 943 541 660](https://wa.me/51943541660)
+- **WhatsApp / Teléfono:** [+51 943 541 660](https://wa.me/51943541660)
+- **CV Oficial:** [Descargar en PDF](./assets/cv-victor-tinoco.pdf)
 
 ---
 
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia [MIT](https://opensource.org/licenses/MIT). Puede utilizarse con fines personales, académicos o comerciales manteniendo el reconocimiento correspondiente.
+<div align="center">
+  <sub>© 2026 Víctor Alfredo Tinoco Cárdenas. Todos los derechos reservados.</sub>
+</div>
