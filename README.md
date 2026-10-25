@@ -76,8 +76,6 @@ Cuento con sólidos conocimientos en **Java, PHP, JavaScript, HTML5/CSS3 y MySQL
 portafolio-victor/
 │
 ├── index.html              # Estructura principal y secciones de la web
-├── robots.txt              # Configuración de rastreo para buscadores
-├── sitemap.xml             # Mapa del sitio web para indexación
 │
 ├── assets/                 # Archivos estáticos y documentos
 │   ├── favicon.svg         # Ícono del sitio web
