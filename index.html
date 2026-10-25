@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Portafolio profesional de Víctor Tinoco - Estudiante de Ingeniería de Sistemas, Desarrollo de Software y Soporte TI." />
-    <title>Víctor Tinoco | Software & TI</title>
+    <meta name="description" content="Portafolio profesional de Víctor Alfredo Tinoco Cárdenas - Estudiante de Ingeniería de Sistemas en Cibertec, Soporte TI y Desarrollo Web." />
+    <title>Víctor Tinoco | Software & Soporte TI</title>
 
     <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
     
-    <!-- Tailwind CSS (CDN oficial, sin Node ni Vite) -->
+    <!-- Tailwind CSS (CDN oficial) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -69,20 +69,25 @@
     <!-- HERO SECTION -->
     <section class="pt-32 pb-20 px-6 max-w-6xl mx-auto min-h-screen flex flex-col justify-center relative">
       <div class="reveal active">
-        <!-- Badge -->
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-card border border-neutral-800 text-xs mb-6">
-          <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
-          Disponible para nuevas oportunidades
+        <!-- Badges informativos -->
+        <div class="flex flex-wrap gap-2 mb-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-card border border-neutral-800 text-xs">
+            <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+            Disponible para nuevas oportunidades
+          </div>
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-card border border-neutral-800 text-xs text-gray-400">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-accent"></i>
+            Bellavista, Callao
+          </div>
         </div>
 
         <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">
-          Transformo problemas reales en <br />
+          Transformo necesidades en <br />
           <span class="text-accent">soluciones tecnológicas.</span>
         </h1>
 
         <p class="text-lg md:text-xl text-gray-400 max-w-2xl mb-10 leading-relaxed">
-          Estudiante de Ingeniería de Sistemas | Desarrollo de Software & Soporte TI. 
-          Desarrollo aplicaciones web, trabajo con bases de datos y automatizo procesos combinando programación y experiencia práctica.
+          <strong class="text-white">Estudiante de Ingeniería de Sistemas en Cibertec</strong> y técnico informático con experiencia en soporte a usuarios, mantenimiento de infraestructura, conectividad de redes y desarrollo de aplicaciones web y de escritorio.
         </p>
 
         <!-- CTAs -->
@@ -100,104 +105,141 @@
             <a href="https://www.linkedin.com/in/victor-alfrendo-tinoco-cardenas-b3a55a22a/" target="_blank" rel="noreferrer" aria-label="LinkedIn" class="p-3 bg-card hover:bg-neutral-800 rounded-lg text-gray-400 hover:text-white transition-colors border border-transparent hover:border-neutral-700">
               <i data-lucide="linkedin" class="w-5 h-5"></i>
             </a>
+            <a href="mailto:victortinoco0203@gmail.com" aria-label="Email" class="p-3 bg-card hover:bg-neutral-800 rounded-lg text-gray-400 hover:text-white transition-colors border border-transparent hover:border-neutral-700">
+              <i data-lucide="mail" class="w-5 h-5"></i>
+            </a>
           </div>
         </div>
       </div>
 
-      <!-- Flecha interactiva hacia abajo -->
+      <!-- Flecha de navegación hacia abajo -->
       <a href="#about" aria-label="Ir a Sobre Mí" class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-gray-500 hover:text-accent transition-colors">
         <i data-lucide="chevron-down" class="w-7 h-7"></i>
       </a>
     </section>
 
-    <!-- SOBRE MÍ & ESPECIALIDADES -->
+    <!-- SOBRE MÍ & ÁREAS DE ENFOQUE (DEL CV) -->
     <section id="about" class="py-20 bg-card/30 border-y border-neutral-900">
       <div class="max-w-6xl mx-auto px-6 reveal">
         <h2 class="text-3xl font-bold text-white mb-10 flex items-center gap-3">
-          <span class="w-8 h-[2px] bg-accent"></span> Sobre Mí & Especialidades
+          <span class="w-8 h-[2px] bg-accent"></span> Áreas de Especialidad
         </h2>
 
         <div class="grid md:grid-cols-3 gap-6">
-          <div class="p-6 bg-card rounded-xl border border-neutral-800 hover:border-accent/50 transition-all duration-300 hover:scale-[1.02]">
-            <i data-lucide="code" class="text-accent mb-4 w-8 h-8"></i>
-            <h3 class="text-xl font-bold text-white mb-2">Desarrollo de Software</h3>
-            <p class="text-gray-400 text-sm leading-relaxed">
-              Creación de interfaces limpias y lógica estructurada utilizando tecnologías web modernas y lenguajes orientados a objetos.
-            </p>
-          </div>
-
-          <div class="p-6 bg-card rounded-xl border border-neutral-800 hover:border-accent/50 transition-all duration-300 hover:scale-[1.02]">
-            <i data-lucide="database" class="text-accent mb-4 w-8 h-8"></i>
-            <h3 class="text-xl font-bold text-white mb-2">Bases de Datos</h3>
-            <p class="text-gray-400 text-sm leading-relaxed">
-              Modelado entidad-relación, optimización de consultas y persistencia de datos utilizando MySQL y SQL Server.
-            </p>
-          </div>
-
+          <!-- Soporte TI e Infraestructura -->
           <div class="p-6 bg-card rounded-xl border border-neutral-800 hover:border-accent/50 transition-all duration-300 hover:scale-[1.02]">
             <i data-lucide="server" class="text-accent mb-4 w-8 h-8"></i>
-            <h3 class="text-xl font-bold text-white mb-2">Infraestructura y TI</h3>
+            <h3 class="text-xl font-bold text-white mb-2">Soporte TI & Redes</h3>
             <p class="text-gray-400 text-sm leading-relaxed">
-              Mantenimiento de equipos, configuración de redes y administración de sistemas en entornos institucionales reales.
+              Diagnóstico y mantenimiento preventivo/correctivo de computadoras y proyectores. Configuración y cableado de redes LAN y atención técnica a usuarios institucionales.
+            </p>
+          </div>
+
+          <!-- Desarrollo de Software & Web -->
+          <div class="p-6 bg-card rounded-xl border border-neutral-800 hover:border-accent/50 transition-all duration-300 hover:scale-[1.02]">
+            <i data-lucide="code" class="text-accent mb-4 w-8 h-8"></i>
+            <h3 class="text-xl font-bold text-white mb-2">Desarrollo Web & Software</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Construcción de aplicaciones web interactivas (PHP, JavaScript, HTML5/CSS3, Bootstrap) y software de escritorio con arquitectura orientada a objetos en Java.
+            </p>
+          </div>
+
+          <!-- Bases de Datos & Plataformas -->
+          <div class="p-6 bg-card rounded-xl border border-neutral-800 hover:border-accent/50 transition-all duration-300 hover:scale-[1.02]">
+            <i data-lucide="database" class="text-accent mb-4 w-8 h-8"></i>
+            <h3 class="text-xl font-bold text-white mb-2">Bases de Datos & Plataformas</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Modelado relacional, gestión de incidencias y administración de plataformas web mediante MySQL, SQL Server, phpMyAdmin y cPanel.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- TECNOLOGÍAS -->
+    <!-- CONOCIMIENTOS Y HERRAMIENTAS (SEGÚN CV) -->
     <section id="skills" class="py-20 px-6 max-w-6xl mx-auto reveal">
-      <h2 class="text-3xl font-bold text-white mb-10 flex items-center gap-3">
-        <span class="w-8 h-[2px] bg-accent"></span> Tecnologías & Habilidades
+      <h2 class="text-3xl font-bold text-white mb-4 flex items-center gap-3">
+        <span class="w-8 h-[2px] bg-accent"></span> Conocimientos & Herramientas
       </h2>
-      <div id="tech-container" class="flex flex-wrap gap-3">
-        <!-- Renderizado dinámicamente desde data.js -->
-      </div>
-    </section>
+      <p class="text-gray-400 text-sm mb-10 max-w-2xl">
+        Tecnologías, entornos y metodologías aplicadas en proyectos académicos y soporte operativo.
+      </p>
 
-    <!-- PROYECTOS -->
-    <section id="projects" class="py-24 px-6 max-w-6xl mx-auto reveal">
-      <h2 class="text-3xl font-bold text-white mb-10 flex items-center gap-3">
-        <span class="w-8 h-[2px] bg-accent"></span> Proyectos Destacados
-      </h2>
-
-      <!-- Filtros -->
-      <div id="project-filters" class="flex flex-wrap gap-2 mb-8">
+      <!-- Categorías de habilidades del CV -->
+      <div id="skills-container" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
         <!-- Renderizado dinámicamente desde data.js -->
       </div>
 
-      <!-- Grid de proyectos -->
-      <div id="projects-grid" class="grid md:grid-cols-2 gap-6">
-        <!-- Renderizado dinámicamente desde data.js -->
-      </div>
-    </section>
-
-    <!-- EXPERIENCIA -->
-    <section id="experience" class="py-20 bg-card/30 border-y border-neutral-900">
-      <div class="max-w-6xl mx-auto px-6 reveal">
-        <h2 class="text-3xl font-bold text-white mb-10 flex items-center gap-3">
-          <span class="w-8 h-[2px] bg-accent"></span> Experiencia
-        </h2>
-
-        <div id="experience-container" class="space-y-8">
+      <!-- Competencias personales e idiomas del CV -->
+      <div class="pt-8 border-t border-neutral-900">
+        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">Competencias Personales & Idiomas</h4>
+        <div id="competencies-container" class="flex flex-wrap gap-2.5">
           <!-- Renderizado dinámicamente desde data.js -->
         </div>
       </div>
     </section>
 
-    <!-- CONTACTO & FOOTER -->
-    <footer id="contact" class="py-20 bg-card border-t border-neutral-900">
-      <div class="max-w-6xl mx-auto px-6 text-center reveal">
-        <h2 class="text-3xl font-bold text-white mb-4">¿Tienes un proyecto en mente?</h2>
-        <p class="text-gray-400 max-w-xl mx-auto mb-8 leading-relaxed">
-          Estoy abierto a oportunidades profesionales, colaboraciones y proyectos donde pueda aportar mis conocimientos técnicos y seguir desarrollándome.
+    <!-- PROYECTOS RELEVANTES (DEL CV) -->
+    <section id="projects" class="py-24 px-6 max-w-6xl mx-auto border-t border-neutral-900 reveal">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+        <div>
+          <h2 class="text-3xl font-bold text-white mb-2 flex items-center gap-3">
+            <span class="w-8 h-[2px] bg-accent"></span> Proyectos Relevantes
+          </h2>
+          <p class="text-gray-400 text-sm">
+            Soluciones aplicadas descritas en mi formación y experiencia técnica.
+          </p>
+        </div>
+        <!-- Filtros -->
+        <div id="project-filters" class="flex flex-wrap gap-2">
+          <!-- Renderizado dinámicamente desde data.js -->
+        </div>
+      </div>
+
+      <!-- Grid de proyectos -->
+      <div id="projects-grid" class="grid md:grid-cols-3 gap-6">
+        <!-- Renderizado dinámicamente desde data.js -->
+      </div>
+    </section>
+
+    <!-- EXPERIENCIA LABORAL & EDUCACIÓN (DEL CV) -->
+    <section id="experience" class="py-20 bg-card/30 border-y border-neutral-900">
+      <div class="max-w-6xl mx-auto px-6 reveal">
+        <h2 class="text-3xl font-bold text-white mb-4 flex items-center gap-3">
+          <span class="w-8 h-[2px] bg-accent"></span> Experiencia & Formación
+        </h2>
+        <p class="text-gray-400 text-sm mb-10">
+          Trayectoria técnica en entornos institucionales y formación académica superior.
         </p>
 
-        <a href="mailto:tu-correo@email.com" class="inline-flex items-center gap-2 px-8 py-4 bg-accent hover:bg-accentHover text-white font-bold rounded-lg transition-colors shadow-lg shadow-accent/20">
-          <i data-lucide="mail" class="w-5 h-5"></i> Contactarme
-        </a>
+        <div id="experience-container" class="space-y-8 max-w-3xl">
+          <!-- Renderizado dinámicamente desde data.js -->
+        </div>
+      </div>
+    </section>
 
-        <div class="flex justify-center gap-4 mt-8">
+    <!-- CONTACTO & INFORMACIÓN PERSONAL -->
+    <footer id="contact" class="py-20 bg-card border-t border-neutral-900">
+      <div class="max-w-6xl mx-auto px-6 text-center reveal">
+        <h2 class="text-3xl font-bold text-white mb-4">¿Hablamos de una oportunidad?</h2>
+        <p class="text-gray-400 max-w-xl mx-auto mb-8 leading-relaxed">
+          Estoy disponible para incorporarme a equipos en áreas de desarrollo de software, soporte TI y automatización de procesos donde pueda aportar valor y continuar aprendiendo.
+        </p>
+
+        <!-- Canales directos de contacto del CV -->
+        <div class="flex flex-wrap justify-center gap-4 mb-8">
+          <a href="mailto:victortinoco0203@gmail.com" class="inline-flex items-center gap-2 px-6 py-3.5 bg-accent hover:bg-accentHover text-white font-bold rounded-lg transition-colors shadow-lg shadow-accent/20 text-sm">
+            <i data-lucide="mail" class="w-4 h-4"></i> victortinoco0203@gmail.com
+          </a>
+          <a href="tel:+51943541660" class="inline-flex items-center gap-2 px-6 py-3.5 bg-card hover:bg-neutral-800 border border-neutral-700 text-white font-medium rounded-lg transition-colors text-sm">
+            <i data-lucide="phone" class="w-4 h-4 text-accent"></i> 943 541 660
+          </a>
+          <a href="https://wa.me/51943541660" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 px-6 py-3.5 bg-card hover:bg-neutral-800 border border-neutral-700 text-white font-medium rounded-lg transition-colors text-sm">
+            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i> WhatsApp
+          </a>
+        </div>
+
+        <div class="flex justify-center gap-4">
           <a href="https://github.com/MoshTC" target="_blank" rel="noreferrer" aria-label="GitHub" class="text-gray-500 hover:text-white transition-colors">
             <i data-lucide="github" class="w-5 h-5"></i>
           </a>
@@ -206,7 +248,9 @@
           </a>
         </div>
 
-        <p class="text-gray-600 text-xs mt-8">© 2026 Víctor Tinoco. Todos los derechos reservados.</p>
+        <p class="text-gray-600 text-xs mt-8">
+          © 2026 Víctor Alfredo Tinoco Cárdenas. Bellavista, Callao.
+        </p>
       </div>
     </footer>
 

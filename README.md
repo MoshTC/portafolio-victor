@@ -121,3 +121,13 @@ Al ser un artefacto estático, puede desplegarse en segundos en:
 ## 📄 Licencia
 
 Este proyecto se encuentra bajo la Licencia [MIT](https://opensource.org/licenses/MIT).
+
+- **GitHub:** [@MoshTC](https://github.com/MoshTC)
+- **LinkedIn:** [Víctor Tinoco](https://www.linkedin.com/in/victor-alfrendo-tinoco-cardenas-b3a55a22a/)
+
+---
+
+## 📄 Licencia
+
+Este proyecto se encuentra bajo la Licencia [MIT](https://opensource.org/licenses/MIT).
+
