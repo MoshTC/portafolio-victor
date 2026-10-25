@@ -1,73 +1,53 @@
-# Portafolio — Víctor Tinoco
+# Portafolio Personal — Víctor Tinoco
 
-Portafolio personal construido con React, Tailwind CSS y Framer Motion.
+Portafolio web profesional desarrollado con **HTML5, Tailwind CSS y JavaScript vanilla**. 
 
-## 🚀 Inicio rápido
+Diseñado para ser **100% estático**: no requiere Node.js, compiladores ni dependencias locales. Puedes abrirlo directamente con doble clic o subirlo a cualquier servidor web tradicional (Apache, Nginx, cPanel, Hostinger, GitHub Pages, etc.).
 
-```bash
-# Instalar dependencias
-npm install
+---
 
-# Iniciar servidor de desarrollo
-npm run dev
+## ⚡ Cómo ver la página en tu computadora
 
-# Construir para producción
-npm run build
+Tienes dos opciones súper sencillas:
 
-# Previsualizar build de producción
-npm run preview
-```
+### Opción 1: Directo en tu navegador (Doble clic)
+Haz doble clic en el archivo `index.html` en tu explorador de archivos y se abrirá inmediatamente en Chrome, Edge o Firefox.
+
+### Opción 2: Con VS Code (Recomendado para editar)
+1. Instala la extensión **Live Server** en VS Code si aún no la tienes.
+2. Haz clic derecho sobre `index.html` y selecciona **"Open with Live Server"**.
+
+---
 
 ## 📁 Estructura del proyecto
 
-```
-src/
-├── assets/                  # Imágenes, íconos y archivos estáticos
-├── components/
-│   ├── common/              # Componentes reutilizables (SectionHeading, SocialIcon)
-│   ├── layout/              # Estructura de página (Navbar, Footer)
-│   └── sections/            # Secciones de contenido (Hero, About, Projects...)
-├── data/                    # Datos estáticos desacoplados de la UI
-│   ├── personal.js          # Información personal y enlaces sociales
-│   ├── navigation.js        # Links del navbar
-│   ├── technologies.js      # Stack tecnológico
-│   ├── projects.js          # Catálogo de proyectos
-│   ├── experience.js        # Experiencia profesional
-│   └── index.js             # Barrel file (re-exportaciones)
-├── hooks/                   # Custom React hooks
-├── utils/                   # Funciones utilitarias
-├── styles/                  # Estilos globales (Tailwind)
-├── App.jsx                  # Componente raíz (orquestador)
-└── main.jsx                 # Punto de entrada de React
+```text
+portafolio-victor/
+├── index.html              # Estructura principal de la página
+├── css/
+│   └── style.css           # Estilos adicionales, scrollbar y animaciones
+├── js/
+│   ├── data.js             # Todos los datos editables (proyectos, bio, enlaces)
+│   └── app.js              # Lógica interactiva (filtros, menú móvil, animaciones)
+├── assets/
+│   ├── favicon.svg         # Ícono del sitio personalizado (VT)
+│   └── cv-victor-tinoco.pdf # Tu currículum descargable
+└── README.md
 ```
 
-## ✏️ Personalización
+---
 
-Para actualizar tu información personal, edita **únicamente** el archivo `src/data/personal.js`:
+## ✏️ Cómo personalizar tu contenido
 
-```js
-export const PERSONAL = {
-  firstName: 'Víctor',
-  lastName: 'Tinoco',
-  email: 'tu-correo@email.com', // ← Cambia esto
-  // ...
-};
-```
+Toda la información está centralizada en **`js/data.js`**. Para cambiar cualquier dato, solo abre ese archivo y edita:
 
-Para agregar proyectos, edita `src/data/projects.js`.
+* **Información personal y redes:** En `PORTFOLIO_DATA.personal`.
+* **Proyectos:** En `PORTFOLIO_DATA.projects`.
+* **Habilidades / Tecnologías:** En `PORTFOLIO_DATA.technologies`.
+* **Experiencia:** En `PORTFOLIO_DATA.experience`.
 
-## 🛠️ Stack
+---
 
-- **React 18** — UI declarativa con componentes
-- **Vite** — Bundler ultrarrápido
-- **Tailwind CSS 3** — Utilidades CSS
-- **Framer Motion** — Animaciones fluidas
-- **Lucide React** — Íconos SVG
+## 🌐 Subir a un servidor / Hosting
 
-## 📦 Deploy
-
-```bash
-npm run build
-# Sube la carpeta dist/ a Netlify, Vercel o GitHub Pages
-```
-
+Solo copia todos los archivos de esta carpeta a la carpeta pública de tu servidor (por ejemplo `public_html` en cPanel o la raíz de GitHub Pages) y funcionará al instante.
