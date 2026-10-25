@@ -6,35 +6,26 @@
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Portafolio profesional de Víctor Alfredo Tinoco Cárdenas - Estudiante de Ingeniería de Sistemas en Cibertec, Soporte TI y Desarrollo Web." />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-
-    <!-- Content Security Policy (Blindaje contra XSS e inyecciones externas) -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:;" />
 
-    <!-- Metadatos Open Graph (LinkedIn, WhatsApp, Facebook) -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Víctor Tinoco | Software & Soporte TI" />
     <meta property="og:description" content="Portafolio profesional de Víctor Alfredo Tinoco Cárdenas - Estudiante de Ingeniería de Sistemas en Cibertec, Soporte TI y Desarrollo Web." />
     <meta property="og:url" content="https://moshtc.github.io/portafolio-victor/" />
     <meta property="og:image" content="https://moshtc.github.io/portafolio-victor/assets/favicon.svg" />
 
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Víctor Tinoco | Software & Soporte TI" />
     <meta name="twitter:description" content="Portafolio profesional de Víctor Alfredo Tinoco Cárdenas - Estudiante de Ingeniería de Sistemas en Cibertec, Soporte TI y Desarrollo Web." />
 
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://moshtc.github.io/portafolio-victor/" />
-
     <title>Víctor Tinoco | Software & Soporte TI</title>
-
     <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
     
-    <!-- Preconexión de fuentes de alto rendimiento -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-    <!-- Tailwind CSS (CDN oficial) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -50,28 +41,17 @@
         }
       }
     </script>
-
-    <!-- Lucide Icons con atributo defer para no bloquear el parseo -->
     <script src="https://unpkg.com/lucide@latest" defer></script>
-
-    <!-- Estilos locales -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body class="bg-background text-gray-200 min-h-screen selection:bg-accent selection:text-white">
 
-    <!-- ENLACE DE ACCESIBILIDAD PARA SALTAR AL CONTENIDO (WCAG 2.2 AA) -->
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-accent focus:text-white focus:font-semibold focus:rounded-lg focus:shadow-xl focus:outline-none">
-      Saltar al contenido principal
-    </a>
-
-    <!-- NAVEGACIÓN -->
     <nav class="fixed w-full top-0 bg-background/90 backdrop-blur-md border-b border-card z-50">
       <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" class="text-xl font-bold text-white tracking-tighter" aria-label="Víctor Tinoco - Inicio">
+        <a href="#" class="text-xl font-bold text-white tracking-tighter" aria-label="Inicio">
           Víctor<span class="text-accent">Tinoco</span>
         </a>
 
-        <!-- Desktop Menu -->
         <div class="hidden md:flex gap-6 text-sm font-medium">
           <a href="#about" class="text-gray-300 hover:text-accent transition-colors">Sobre Mí</a>
           <a href="#skills" class="text-gray-300 hover:text-accent transition-colors">Habilidades</a>
@@ -80,11 +60,10 @@
           <a href="#contact" class="text-gray-300 hover:text-accent transition-colors">Contacto</a>
         </div>
 
-        <!-- Mobile Menu Button con atributos de accesibilidad ARIA -->
         <button
           id="mobile-menu-btn"
           type="button"
-          aria-label="Abrir menú de navegación"
+          aria-label="Abrir menú"
           aria-expanded="false"
           aria-controls="mobile-menu"
           class="md:hidden p-2 text-gray-400 hover:text-white transition-colors"
@@ -93,7 +72,6 @@
         </button>
       </div>
 
-      <!-- Mobile Dropdown -->
       <div id="mobile-menu" class="hidden md:hidden bg-background/95 border-b border-neutral-800 px-6 py-4 flex flex-col gap-4 text-sm font-medium">
         <a href="#about" class="text-gray-300 hover:text-accent transition-colors py-1">Sobre Mí</a>
         <a href="#skills" class="text-gray-300 hover:text-accent transition-colors py-1">Habilidades</a>
@@ -103,13 +81,10 @@
       </div>
     </nav>
 
-    <!-- LANDMARK PRINCIPAL DE CONTENIDO -->
     <main id="main-content">
 
-      <!-- HERO SECTION -->
       <section class="pt-32 pb-20 px-6 max-w-6xl mx-auto min-h-screen flex flex-col justify-center relative">
         <div class="reveal active">
-          <!-- Badges informativos -->
           <div class="flex flex-wrap gap-2 mb-6">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-card border border-neutral-800 text-xs">
               <span class="w-2 h-2 rounded-full bg-accent animate-pulse" aria-hidden="true"></span>
@@ -130,7 +105,6 @@
             <strong class="text-white">Estudiante de Ingeniería de Sistemas en Cibertec</strong> y técnico informático con experiencia en soporte a usuarios, mantenimiento de infraestructura, conectividad de redes y desarrollo de aplicaciones web y de escritorio.
           </p>
 
-          <!-- CTAs -->
           <div class="flex flex-wrap gap-4 items-center">
             <a href="#projects" class="px-6 py-3 bg-accent hover:bg-accentHover text-white font-medium rounded-lg transition-colors shadow-lg shadow-accent/20">
               Ver proyectos
@@ -157,30 +131,28 @@
               </span>
             </a>
             <div class="flex items-center gap-2 ml-2">
-              <a href="https://github.com/MoshTC" target="_blank" rel="noopener noreferrer" aria-label="Perfil de GitHub de Víctor Tinoco" class="p-3 bg-card hover:bg-neutral-800 rounded-lg text-gray-400 hover:text-white transition-colors border border-transparent hover:border-neutral-700 flex items-center justify-center">
+              <a href="https://github.com/MoshTC" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="p-3 bg-card hover:bg-neutral-800 rounded-lg text-gray-400 hover:text-white transition-colors border border-transparent hover:border-neutral-700 flex items-center justify-center">
                 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
                 </svg>
               </a>
-              <a href="https://www.linkedin.com/in/victor-alfrendo-tinoco-cardenas-b3a55a22a/" target="_blank" rel="noopener noreferrer" aria-label="Perfil de LinkedIn de Víctor Tinoco" class="p-3 bg-card hover:bg-neutral-800 rounded-lg text-gray-400 hover:text-white transition-colors border border-transparent hover:border-neutral-700 flex items-center justify-center">
+              <a href="https://www.linkedin.com/in/victor-alfrendo-tinoco-cardenas-b3a55a22a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="p-3 bg-card hover:bg-neutral-800 rounded-lg text-gray-400 hover:text-white transition-colors border border-transparent hover:border-neutral-700 flex items-center justify-center">
                 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
                 </svg>
               </a>
-              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=victortinoco0203@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Enviar correo a victortinoco0203@gmail.com vía Gmail" class="p-3 bg-card hover:bg-neutral-800 rounded-lg text-gray-400 hover:text-white transition-colors border border-transparent hover:border-neutral-700 flex items-center justify-center">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=victortinoco0203@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Gmail" class="p-3 bg-card hover:bg-neutral-800 rounded-lg text-gray-400 hover:text-white transition-colors border border-transparent hover:border-neutral-700 flex items-center justify-center">
                 <i data-lucide="mail" class="w-5 h-5" aria-hidden="true"></i>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Flecha de navegación hacia abajo -->
-        <a href="#about" aria-label="Ir a la sección Sobre Mí" class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-gray-500 hover:text-accent transition-colors">
+        <a href="#about" aria-label="Ir a Sobre Mí" class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-gray-500 hover:text-accent transition-colors">
           <i data-lucide="chevron-down" class="w-7 h-7" aria-hidden="true"></i>
         </a>
       </section>
 
-      <!-- SOBRE MÍ & ÁREAS DE ENFOQUE (DEL CV) -->
       <section id="about" class="py-20 bg-card/30 border-y border-neutral-900 scroll-mt-20">
         <div class="max-w-6xl mx-auto px-6 reveal">
           <h2 class="text-3xl font-bold text-white mb-10 flex items-center gap-3">
@@ -188,7 +160,6 @@
           </h2>
 
           <div class="grid md:grid-cols-3 gap-6">
-            <!-- Soporte TI e Infraestructura -->
             <div class="p-6 bg-card rounded-xl border border-neutral-800 hover:border-accent/50 transition-all duration-300 hover:scale-[1.02]">
               <i data-lucide="server" class="text-accent mb-4 w-8 h-8" aria-hidden="true"></i>
               <h3 class="text-xl font-bold text-white mb-2">Soporte TI & Redes</h3>
@@ -197,7 +168,6 @@
               </p>
             </div>
 
-            <!-- Desarrollo de Software & Web -->
             <div class="p-6 bg-card rounded-xl border border-neutral-800 hover:border-accent/50 transition-all duration-300 hover:scale-[1.02]">
               <i data-lucide="code" class="text-accent mb-4 w-8 h-8" aria-hidden="true"></i>
               <h3 class="text-xl font-bold text-white mb-2">Desarrollo Web & Software</h3>
@@ -206,7 +176,6 @@
               </p>
             </div>
 
-            <!-- Bases de Datos & Plataformas -->
             <div class="p-6 bg-card rounded-xl border border-neutral-800 hover:border-accent/50 transition-all duration-300 hover:scale-[1.02]">
               <i data-lucide="database" class="text-accent mb-4 w-8 h-8" aria-hidden="true"></i>
               <h3 class="text-xl font-bold text-white mb-2">Bases de Datos & Plataformas</h3>
@@ -218,7 +187,6 @@
         </div>
       </section>
 
-      <!-- CONOCIMIENTOS Y HERRAMIENTAS (SEGÚN CV) -->
       <section id="skills" class="py-20 px-6 max-w-6xl mx-auto scroll-mt-20 reveal">
         <h2 class="text-3xl font-bold text-white mb-4 flex items-center gap-3">
           <span class="w-8 h-[2px] bg-accent" aria-hidden="true"></span> Conocimientos & Herramientas
@@ -227,21 +195,14 @@
           Tecnologías, entornos y metodologías aplicadas en proyectos académicos y soporte operativo.
         </p>
 
-        <!-- Categorías de habilidades del CV -->
-        <div id="skills-container" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          <!-- Renderizado dinámicamente desde data.js -->
-        </div>
+        <div id="skills-container" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"></div>
 
-        <!-- Competencias personales e idiomas del CV (H3 para jerarquía accesible) -->
         <div class="pt-8 border-t border-neutral-900">
           <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">Competencias Personales & Idiomas</h3>
-          <div id="competencies-container" class="flex flex-wrap gap-2.5">
-            <!-- Renderizado dinámicamente desde data.js -->
-          </div>
+          <div id="competencies-container" class="flex flex-wrap gap-2.5"></div>
         </div>
       </section>
 
-      <!-- PROYECTOS RELEVANTES (DEL CV) -->
       <section id="projects" class="py-24 px-6 max-w-6xl mx-auto border-t border-neutral-900 scroll-mt-20 reveal">
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
           <div>
@@ -252,19 +213,12 @@
               Soluciones aplicadas descritas en mi formación y experiencia técnica.
             </p>
           </div>
-          <!-- Filtros -->
-          <div id="project-filters" class="flex flex-wrap gap-2">
-            <!-- Renderizado dinámicamente desde data.js -->
-          </div>
+          <div id="project-filters" class="flex flex-wrap gap-2"></div>
         </div>
 
-        <!-- Grid de proyectos -->
-        <div id="projects-grid" class="grid md:grid-cols-3 gap-6">
-          <!-- Renderizado dinámicamente desde data.js -->
-        </div>
+        <div id="projects-grid" class="grid md:grid-cols-3 gap-6"></div>
       </section>
 
-      <!-- EXPERIENCIA LABORAL & EDUCACIÓN (DEL CV) -->
       <section id="experience" class="py-20 bg-card/30 border-y border-neutral-900 scroll-mt-20 reveal">
         <div class="max-w-6xl mx-auto px-6">
           <h2 class="text-3xl font-bold text-white mb-4 flex items-center gap-3">
@@ -274,15 +228,12 @@
             Trayectoria técnica en entornos institucionales y formación académica superior.
           </p>
 
-          <div id="experience-container" class="space-y-8 max-w-3xl">
-            <!-- Renderizado dinámicamente desde data.js -->
-          </div>
+          <div id="experience-container" class="space-y-8 max-w-3xl"></div>
         </div>
       </section>
 
     </main>
 
-    <!-- CONTACTO & INFORMACIÓN PERSONAL -->
     <footer id="contact" class="py-20 bg-card border-t border-neutral-900 scroll-mt-20">
       <div class="max-w-6xl mx-auto px-6 text-center reveal">
         <h2 class="text-3xl font-bold text-white mb-4">¿Hablamos de una oportunidad?</h2>
@@ -290,7 +241,6 @@
           Estoy disponible para incorporarme a equipos en áreas de desarrollo de software, soporte TI y automatización de procesos donde pueda aportar valor y continuar aprendiendo.
         </p>
 
-        <!-- Canal directo de contacto oficial (Abre Gmail directamente) -->
         <div class="flex justify-center mb-8">
           <a href="https://mail.google.com/mail/?view=cm&fs=1&to=victortinoco0203@gmail.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-8 py-4 bg-accent hover:bg-accentHover text-white font-bold rounded-lg transition-colors shadow-lg shadow-accent/20 text-sm">
             <i data-lucide="mail" class="w-4 h-4" aria-hidden="true"></i> Redactar mensaje en Gmail
@@ -298,12 +248,12 @@
         </div>
 
         <div class="flex justify-center gap-4">
-          <a href="https://github.com/MoshTC" target="_blank" rel="noopener noreferrer" aria-label="Perfil de GitHub de Víctor Tinoco" class="p-3 bg-card hover:bg-neutral-800 rounded-lg text-gray-500 hover:text-white transition-colors border border-neutral-800 flex items-center justify-center">
+          <a href="https://github.com/MoshTC" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="p-3 bg-card hover:bg-neutral-800 rounded-lg text-gray-500 hover:text-white transition-colors border border-neutral-800 flex items-center justify-center">
             <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
             </svg>
           </a>
-          <a href="https://www.linkedin.com/in/victor-alfrendo-tinoco-cardenas-b3a55a22a/" target="_blank" rel="noopener noreferrer" aria-label="Perfil de LinkedIn de Víctor Tinoco" class="p-3 bg-card hover:bg-neutral-800 rounded-lg text-gray-500 hover:text-white transition-colors border border-neutral-800 flex items-center justify-center">
+          <a href="https://www.linkedin.com/in/victor-alfrendo-tinoco-cardenas-b3a55a22a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="p-3 bg-card hover:bg-neutral-800 rounded-lg text-gray-500 hover:text-white transition-colors border border-neutral-800 flex items-center justify-center">
             <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
             </svg>
@@ -316,7 +266,6 @@
       </div>
     </footer>
 
-    <!-- Scripts de datos y funcionalidad -->
     <script src="./js/data.js"></script>
     <script src="./js/app.js"></script>
   </body>
