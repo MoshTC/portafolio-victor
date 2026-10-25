@@ -1,15 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <!-- Fondo oscuro con bordes redondeados -->
   <rect width="100" height="100" rx="24" fill="#121212" />
   <rect x="2" y="2" width="96" height="96" rx="22" fill="none" stroke="#262626" stroke-width="4" />
-  
-  <!-- Símbolo de código </> -->
-  <!-- Bracket izquierdo < en blanco -->
   <path d="M36 32 L20 50 L36 68" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-  
-  <!-- Slash central / en rojo acento -->
   <line x1="56" y1="28" x2="44" y2="72" stroke="#EF4444" stroke-width="8" stroke-linecap="round" />
-  
-  <!-- Bracket derecho > en blanco -->
   <path d="M64 32 L80 50 L64 68" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none" />
 </svg>

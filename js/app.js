@@ -1,19 +1,3 @@
-/**
- * @file app.js
- * @description Lógica interactiva del portafolio:
- * - Sanitización preventiva de cadenas contra XSS
- * - Renderizado fiel de experiencia, educación, proyectos y habilidades según el CV
- * - Filtro interactivo de proyectos con soporte de Estado Vacío
- * - Menú hamburguesa móvil accesible con aria-expanded sincronizado
- * - Animaciones de scroll (Intersection Observer)
- * - Inicialización de íconos Lucide
- */
-
-/**
- * Sanitiza cadenas de texto para prevenir inyecciones HTML / DOM-based XSS (OWASP ASVS L1).
- * @param {string} str 
- * @returns {string}
- */
 function escapeHTML(str) {
   if (typeof str !== 'string') return '';
   return str.replace(/[&<>"']/g, (m) => ({
@@ -26,11 +10,7 @@ function escapeHTML(str) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Validación de resiliencia de datos
-  if (typeof PORTFOLIO_DATA === 'undefined') {
-    console.error('Error: PORTFOLIO_DATA no está disponible.');
-    return;
-  }
+  if (typeof PORTFOLIO_DATA === 'undefined') return;
 
   renderSkillsCategories();
   initProjectsFilter();
@@ -45,9 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-/* ==========================================================================
-   1. HABILIDADES AGRUPADAS (SEGÚN CV)
-   ========================================================================== */
 function renderSkillsCategories() {
   const container = document.getElementById('skills-container');
   if (!container) return;
@@ -77,9 +54,6 @@ function renderSkillsCategories() {
     .join('');
 }
 
-/* ==========================================================================
-   2. FILTROS Y PROYECTOS
-   ========================================================================== */
 const PROJECT_FILTERS = ['Todos', 'PHP', 'JavaScript', 'Java', 'HTML5', 'MySQL'];
 let activeFilter = 'Todos';
 
@@ -134,7 +108,6 @@ function renderProjects(filter) {
       ? PORTFOLIO_DATA.projects
       : PORTFOLIO_DATA.projects.filter((p) => p.tech.includes(filter));
 
-  // Manejo de Estado Vacío (Empty State)
   if (!filtered || filtered.length === 0) {
     grid.innerHTML = `
       <div class="col-span-full py-16 text-center bg-card/40 rounded-xl border border-neutral-800/80 p-8">
@@ -223,9 +196,6 @@ function renderProjects(filter) {
     .join('');
 }
 
-/**
- * Restablece el filtro activo al estado inicial 'Todos'.
- */
 function resetProjectFilters() {
   const allBtn = document.querySelector('.filter-btn[data-filter="Todos"]');
   if (allBtn) {
@@ -233,9 +203,6 @@ function resetProjectFilters() {
   }
 }
 
-/* ==========================================================================
-   3. EXPERIENCIA LABORAL & EDUCACIÓN (DEL CV)
-   ========================================================================== */
 function renderExperienceAndEducation() {
   const container = document.getElementById('experience-container');
   if (!container) return;
@@ -296,9 +263,6 @@ function renderExperienceAndEducation() {
   container.innerHTML = expHTML + eduHTML;
 }
 
-/* ==========================================================================
-   4. COMPETENCIAS E IDIOMAS (DEL CV)
-   ========================================================================== */
 function renderCompetencies() {
   const compContainer = document.getElementById('competencies-container');
   if (!compContainer) return;
@@ -328,9 +292,6 @@ function renderCompetencies() {
   compContainer.innerHTML = compsHTML + langHTML;
 }
 
-/* ==========================================================================
-   5. MENÚ MÓVIL ACCESIBLE (WCAG 2.2 AA)
-   ========================================================================== */
 function initMobileMenu() {
   const toggleBtn = document.getElementById('mobile-menu-btn');
   const menu = document.getElementById('mobile-menu');
@@ -338,7 +299,7 @@ function initMobileMenu() {
 
   function updateAriaState(isOpen) {
     toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    toggleBtn.setAttribute('aria-label', isOpen ? 'Cerrar menú de navegación' : 'Abrir menú de navegación');
+    toggleBtn.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
   }
 
   toggleBtn.addEventListener('click', () => {
@@ -355,9 +316,6 @@ function initMobileMenu() {
   });
 }
 
-/* ==========================================================================
-   6. ANIMACIONES AL HACER SCROLL
-   ========================================================================== */
 function initScrollAnimations() {
   if (!('IntersectionObserver' in window)) {
     document.querySelectorAll('.reveal').forEach((el) => el.classList.add('active'));
@@ -378,9 +336,6 @@ function initScrollAnimations() {
   document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 }
 
-/* ==========================================================================
-   7. ANIMACIÓN DEL BOTÓN DESCARGAR CV (INSPIRADA EN MILAN RARING)
-   ========================================================================== */
 function initCvDownloadAnimation() {
   const btn = document.getElementById('cv-download-btn');
   if (!btn) return;
@@ -393,21 +348,17 @@ function initCvDownloadAnimation() {
     if (isAnimating) return;
     isAnimating = true;
 
-    // Fase 1: Descargando (flecha animada y barra de progreso inferior)
     btn.classList.add('is-downloading');
     if (textNode) textNode.textContent = 'Descargando...';
 
-    // Fase 2: Éxito (Check ✓ animado y confirmación) tras 1.2 segundos
     setTimeout(() => {
       btn.classList.remove('is-downloading');
       btn.classList.add('is-success');
 
-      // Fase 3: Regreso suave a reposo tras 2.2 segundos
       setTimeout(() => {
         btn.classList.remove('is-success');
         if (textNode) textNode.textContent = 'Descargar CV';
 
-        // Reset de la barra de progreso sin animación inversa
         if (progressLine) {
           progressLine.style.transition = 'none';
           progressLine.style.width = '0%';
@@ -422,4 +373,3 @@ function initCvDownloadAnimation() {
     }, 1200);
   });
 }
-

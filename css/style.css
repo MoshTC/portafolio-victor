@@ -1,4 +1,3 @@
-/* Estilos complementarios y animaciones */
 * {
   margin: 0;
   padding: 0;
@@ -10,13 +9,11 @@ html {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
-/* Foco accesible para navegación por teclado (WCAG 2.2 AA) */
 :focus-visible {
   outline: 2px solid #EF4444 !important;
   outline-offset: 3px !important;
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -34,7 +31,6 @@ html {
   background: #EF4444;
 }
 
-/* Animaciones suaves al hacer scroll */
 .reveal {
   opacity: 0;
   transform: translateY(20px);
@@ -46,9 +42,6 @@ html {
   transform: translateY(0);
 }
 
-/* ==========================================================================
-   ANIMACIÓN DEL BOTÓN DESCARGAR CV (Inspirado en Milan Raring)
-   ========================================================================== */
 .cv-download-btn {
   position: relative;
   overflow: hidden;
@@ -56,7 +49,6 @@ html {
   justify-content: center;
 }
 
-/* Barra de progreso sutil en la base del botón */
 .cv-progress-line {
   position: absolute;
   bottom: 0;
@@ -72,7 +64,6 @@ html {
   width: 100%;
 }
 
-/* Efecto de flecha descendente continua durante la descarga */
 .cv-download-btn.is-downloading .cv-icon-download {
   animation: cvArrowDrop 0.8s ease-in-out infinite;
 }
@@ -96,7 +87,6 @@ html {
   }
 }
 
-/* Estados de contenido (reposo vs éxito) */
 .cv-state-idle,
 .cv-state-success {
   display: inline-flex;
@@ -112,7 +102,6 @@ html {
   pointer-events: none;
 }
 
-/* Transición a estado de éxito (Check ✓) */
 .cv-download-btn.is-success .cv-state-idle {
   opacity: 0;
   transform: translateY(-8px);
@@ -124,10 +113,9 @@ html {
 }
 
 .cv-download-btn.is-success {
-  border-color: rgba(52, 211, 153, 0.5); /* sutil acento esmeralda */
+  border-color: rgba(52, 211, 153, 0.5);
 }
 
-/* Trazo animado del checkmark ✓ */
 .cv-check-svg {
   stroke-dasharray: 24;
   stroke-dashoffset: 24;
@@ -138,7 +126,6 @@ html {
   stroke-dashoffset: 0;
 }
 
-/* Accesibilidad: Respeto a prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
   .cv-download-btn.is-downloading .cv-icon-download {
     animation: none;
@@ -150,4 +137,3 @@ html {
     transition: none !important;
   }
 }
-

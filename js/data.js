@@ -1,9 +1,3 @@
-/**
- * @file data.js
- * @description Centraliza toda la información profesional del portafolio.
- * Basado directamente en el currículum de Víctor Alfredo Tinoco Cárdenas.
- */
-
 const PORTFOLIO_DATA = {
   personal: {
     fullName: 'Víctor Alfredo Tinoco Cárdenas',
