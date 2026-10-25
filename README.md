@@ -112,7 +112,7 @@ Este portafolio es 100% estático (no requiere Node.js ni instalación de depend
 
 ¿Te interesa mi perfil para una oportunidad laboral o colaboración técnica? Puedes contactarme a través de:
 
-- **Correo electrónico:** [victortinoco0203@gmail.com](mailto:victortinoco0203@gmail.com)
+- **Correo electrónico:** [victortinoco0203@gmail.com](https://mail.google.com/mail/?view=cm&fs=1&to=victortinoco0203@gmail.com)
 - **LinkedIn:** [Víctor Alfredo Tinoco Cárdenas](https://www.linkedin.com/in/victor-alfrendo-tinoco-cardenas-b3a55a22a/)
 - **GitHub:** [@MoshTC](https://github.com/MoshTC)
 - **CV Oficial:** [Descargar en PDF](./assets/cv-victor-tinoco.pdf)
