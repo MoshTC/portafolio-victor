@@ -4,7 +4,7 @@
 
 Aquí presento mis proyectos de desarrollo de software, mi experiencia práctica en soporte técnico TI y las tecnologías con las que trabajo.
 
-🌐 **Ver sitio web:** [https://victor-tinoco.ifree.page/portafolio-victor/#about](https://victor-tinoco.ifree.page/portafolio-victor/#about)
+🌐 **Ver sitio web:** [https://victor-tinoco.ifree.page/](https://victor-tinoco.ifree.page/)
 
 ---
 
